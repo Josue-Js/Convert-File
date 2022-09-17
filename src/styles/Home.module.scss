@@ -1,0 +1,29 @@
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 0 1rem;
+
+
+  .box {
+    width: 100%;
+    max-width: 720px;
+    border-radius: 6px;
+    padding: 2.25rem 2rem;
+    background: var(--color-white-ice);
+  }
+}
+
+
+@media screen and (max-width: 720px) {
+
+
+  .container {
+
+    .box {
+      padding: 2.25rem 1rem;
+    }
+  }
+}

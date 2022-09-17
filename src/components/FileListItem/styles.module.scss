@@ -1,0 +1,124 @@
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0.5rem;
+  background: var(--color-white);
+  box-shadow: 0px 0px 60px rgba(0, 0, 0, .1);
+
+  .wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    .name {
+      display: -webkit-box;
+      font-size: 1rem;
+      max-width: 120px;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;  
+      overflow: hidden;
+    }
+  }
+
+
+  .selectFormat {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    select {
+      width: 70px;
+      font-size: 15px;
+    }
+  }
+
+  > div:nth-child(3) {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 4rem;
+
+    .status {
+      font-size: 0.875rem;
+      padding: 0.25rem 0.375rem;
+      background: var(--color-green);
+      color: var(--color-white);
+    }
+
+    .status.waiting {
+      background: var(--color-orange);
+    }
+
+    .status.finished {
+      background: var(--color-green);
+    }
+
+
+    .download {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+       
+      span {
+        display: none;
+      }
+    }
+  }
+
+  .close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+
+@media screen and (max-width: 720px) {
+
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+
+
+    .asd {
+      width: 100%;
+      gap: 16px;
+      flex-direction: column;
+      padding: 0;
+
+      .status {
+        align-self: center;
+      }
+
+
+      .download {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        width: 100%;
+        padding: 0.5rem 4.8125rem;
+        background: var(--color-green);
+
+        span {
+          display: initial;
+          font-size: 1rem;
+          color: var(--color-white);
+        }
+
+        img {
+          filter: brightness(0) invert(1);
+        }
+      }
+    }
+  }
+}

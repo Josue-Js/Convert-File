@@ -1,0 +1,60 @@
+.convertZone {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+
+  main {
+    width: 100%;
+  }
+
+
+  footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    button {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 16px;
+      font-weight: 500;
+      padding: 6px 8px;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      transition: all 300ms ease;
+    }
+
+    button.convert {
+      background: #02c438;
+
+      &:hover {
+        filter: brightness(0.9);
+      }
+    }
+
+    button.addMoreFile {
+      color: #131313;
+      background: transparent;
+      border: 1px solid #131313;
+
+      &:hover {
+        color: #f9f9f9;
+        background: #131313;
+
+        svg {
+          fill: #f9f9f9;
+        }
+      }
+    }
+
+
+
+  }
+}
